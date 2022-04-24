@@ -17,6 +17,10 @@ app.get('/explorersInNode',(req,res)=>{   //path que respondera la url localhost
     res.send(explorer)
 })
 
+app.get('/explorers/:explorerName',(req,res)=>{   //path que respondera explorers pero cuando usas : ya sera un parametro que recogeras y lo guardas en req con . param
+     res.send(req.params)
+ })
+
 app.listen(port,()=>{          //inicializamos la app express  
     console.log(`example en port ${port}`)
 })
