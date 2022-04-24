@@ -12,6 +12,10 @@ app.get('/launchx',(req,res)=>{   //path que respondera la url localhost/launchx
     res.send('Bienvenido a launch')
 })
 
+app.get('/explorersInNode',(req,res)=>{   //path que respondera la url localhost/exploresInNode devolviendo objetos
+   const explorer = {name:"explorer", msg: "hola developer"}
+    res.send(explorer)
+})
 
 app.listen(port,()=>{          //inicializamos la app express  
     console.log(`example en port ${port}`)
